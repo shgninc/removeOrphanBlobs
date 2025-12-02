@@ -5,3 +5,14 @@ A common problem in docker images registry, special in go Harbor, There is a con
 So, Harbor occupide disk, which are not accesable and useabl. In some way, harbor delete them by GC, but in some cases GC can not find the blobs in database (so named them orphan) and ignore them.
 
 By this bash script I check if the blobs dose not exist in database, delete it.
+
+## How to execute the script?
+First execute `du` command to get the directory name and size:
+
+```
+du -sh /storage/registry/docker/registry/v2/repositories/*
+```
+And then, execut the script by:
+```
+./checkBlobs.sh dir-name
+```
