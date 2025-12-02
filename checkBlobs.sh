@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_PATH="/storage/registry/docker/registry/v2/blobs/sha256/73"
+BASE_PATH="/storage/registry/docker/registry/v2/blobs/sha256/$1"
 folders=("$BASE_PATH"/*)
 total=${#folders[@]}
 count=0
